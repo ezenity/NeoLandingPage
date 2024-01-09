@@ -54,7 +54,7 @@ function animate() {
 
   updateParticles(); // Update the particles each frame
 
-  // Render the scene
+  // Render the main scene
   renderer.render(scene, camera);
 }
 

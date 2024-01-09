@@ -1,16 +1,19 @@
 // For setting up the Three.js scene, camera, and renderer.
-export let scene, camera, renderer, clock;
+export let scene;
+// export let text3DScene;
+export let camera, renderer, clock;
 
 export function initScene() {
   clock = new THREE.Clock();
   
   // Scene
   scene = new THREE.Scene();
+  // text3DScene = new THREE.Scene();
   
   // Camera
   camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000); // 75, window.innerWidth / window.innerHeight, 0.1, 1000
   // this will make the camera box start out really far (small) then zoom closer (big)
-  camera.position.z = 55; // Original 5
+  camera.position.z = 25; // Original 5
 
   // Renderer
   renderer = new THREE.WebGLRenderer();

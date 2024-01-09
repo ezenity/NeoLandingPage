@@ -9,7 +9,7 @@ body, html {
 
 .content {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -18,6 +18,7 @@ body, html {
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #00ff00; /* Matrix green border */
+  backdrop-filter: blur(5px);
 }
 
 .contacts p {
@@ -26,7 +27,9 @@ body, html {
 
 .contact-link {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: bold;;
   background: #000;
   border: 1px solid #00ff00;
   color: #00ff00;
@@ -41,7 +44,9 @@ body, html {
 
 .email {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
   background: #000;
   border: 1px solid #00ff00;
   color: #00ff00;
@@ -61,7 +66,8 @@ a:hover {
   z-index: 15;
   left: 10px;
   top: 10px;
-  padding: 10px;
+  padding: 8px 20px;
+  border-radius: 4px;
   background: #000;
   color: #00ff00;
   border: 1px solid #00ff00;
@@ -113,7 +119,7 @@ a:hover {
   left: 0; 
   width: 100%; 
   height: 100%; 
-  background: rgba(0,0,0,0.8); 
+  background: rgba(0,0,0); 
   color: #00ff00; 
   z-index: 1000;
 }
@@ -132,4 +138,28 @@ a:hover {
   border: 1px solid #00ff00; 
   color: #00ff00; 
   cursor: pointer;
+}
+
+/* Github source link */
+.github-link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 20; /* Ensuring it's above other elements */
+  padding: 8px 0px;
+}
+
+.github-link a {
+  padding: 8px 16px;
+  background: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.github-link a:hover {
+  background: #005500;
+  color: #ffffff;
 }
