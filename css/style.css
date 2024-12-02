@@ -163,3 +163,28 @@ a:hover {
   background: #005500;
   color: #ffffff;
 }
+
+/* Connect Wallet Button */
+#connectWallet {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 20px;
+  background: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+#connectWallet:hover {
+  background: #005500;
+  color: #ffffff;
+}
+#balance {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+}
