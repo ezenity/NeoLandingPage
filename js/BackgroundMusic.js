@@ -1,4 +1,5 @@
 // For handling backgroud music and its controls.
+import matrixTheme from '../sounds/matrix_theme.mp3';
 import { camera } from './SceneSetup.js';
 
 let audioListener, sound, audioLoader;
@@ -10,7 +11,7 @@ export function initBackgroundMusic() {
 
   sound = new THREE.Audio(audioListener);
   audioLoader = new THREE.AudioLoader();
-  audioLoader.load('sounds/matrix_theme.mp3', function(buffer) {
+  audioLoader.load(matrixTheme, function(buffer) {
     sound.setBuffer(buffer);
     sound.setLoop(true);
     sound.setVolume(soundEnabled ? 0.5 : 0);

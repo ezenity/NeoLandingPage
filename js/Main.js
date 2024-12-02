@@ -9,6 +9,8 @@ import { initBackgroundMusic, initAudioToggle } from './BackgroundMusic.js';
 import { MatrixRain } from './MatrixRain.js';
 import { initAudioConsent } from './AudioConsent.js';
 import { connectWallet, getMTBRBalance } from './MTBRIntegration.js';
+import '../css/style.css';
+
 
 document.getElementById('connectWallet').addEventListener('click', async () => {
   await connectWallet();

@@ -2,8 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000;
-  color: #00ff00;
+  background-color: #000; /* Matrix black background */
+  color: #00ff00; /* Matrix green text */
   font-family: 'Courier New', Courier, monospace;
 }
 

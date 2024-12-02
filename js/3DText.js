@@ -1,4 +1,5 @@
 import { scene } from './SceneSetup.js';
+import helvetikerFont from '../fonts/helvetiker_regular.typeface.json'; // Adjust based on your project structure
 
 let mesh, textMaterial, loader;
 const phrases = [
@@ -30,8 +31,8 @@ function updateText() {
   }
 
   // Dynamically determine text size and position based on window width
-  let textSize, textPositionY;
   const windowWidth = window.innerWidth;
+  let textSize = 0.4, textPositionY = 0.6; // Desktops and larger screens
 
   if (windowWidth < 480) { // Small mobile devices
     textSize = 0.1;
@@ -42,13 +43,10 @@ function updateText() {
   } else if (windowWidth < 1024) { // Tablets
     textSize = 0.3;
     textPositionY = 1;
-  } else { // Desktops and larger screens
-    textSize = 0.4;
-    textPositionY = 0.6;
   }
 
   // Load new text
-  loader.load('fonts/helvetiker_regular.typeface.json', function (font) {
+  loader.load(helvetikerFont, function (font) {
     let geometry = new THREE.TextGeometry(phrases[currentPhraseIndex], {
       font: font,
       size: textSize,
